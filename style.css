@@ -1,0 +1,204 @@
+:root {
+    --bg-dark: #0b1325; 
+    --panel-bg: rgba(253, 245, 230, 0.95); 
+    --panel-dark: #232b38; 
+    --gold: #d4af37; 
+    --spidey-red: #cc2b2b; 
+    --comic-yellow: #f4d03f; 
+    --border-color: #3a4454;
+}
+
+body {
+    background-color: var(--bg-dark);
+    background-image: radial-gradient(rgba(255,255,255,0.05) 15%, transparent 16%);
+    background-size: 12px 12px;
+    color: #ffffff;
+    font-family: 'Special Elite', system-ui, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(180deg, rgba(11,19,37,0.6) 0%, rgba(11,19,37,0.9) 100%);
+    position: relative;
+    border-bottom: 2px solid var(--gold);
+}
+
+header h1 {
+    font-family: 'Bangers', cursive;
+    font-size: 3.5rem;
+    color: var(--comic-yellow);
+    letter-spacing: 4px;
+    margin: 0;
+    text-shadow: 4px 4px 0px var(--spidey-red), 7px 7px 0px #000;
+}
+
+header p {
+    font-family: 'Metamorphous', serif;
+    font-size: 1.2rem;
+    color: var(--gold);
+    margin-top: 10px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+}
+
+.main-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+@media (min-width: 850px) {
+    .main-container {
+        grid-template-columns: 1fr 1.4fr;
+        align-items: start;
+    }
+}
+
+
+.cover-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.cover-frame {
+    background-color: #1a1a1a;
+    border: 8px solid var(--gold);
+    border-radius: 4px;
+    box-shadow: 0px 15px 35px rgba(0,0,0,0.7), 0 0 0 4px #000;
+    width: 100%;
+    max-width: 320px;
+    aspect-ratio: 2 / 3;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom, rgba(204,43,43,0.3), rgba(11,19,37,0.8));
+}
+
+.badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: var(--comic-yellow);
+    color: #000;
+    font-family: 'Bangers', cursive;
+    font-size: 1.2rem;
+    padding: 5px 12px;
+    border: 3px solid #000;
+    box-shadow: 3px 3px 0px #000;
+    z-index: 10;
+    transform: rotate(-3deg);
+}
+
+.cover-placeholder {
+    text-align: center;
+    padding: 20px;
+    font-size: 1.1rem;
+    color: var(--gold);
+    border: 2px dashed rgba(212,175,55,0.4);
+    margin: 20px;
+}
+
+.cover-placeholder-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+
+.info-panel {
+    background-color: var(--panel-bg);
+    color: #222;
+    border: 12px solid var(--panel-dark);
+    box-shadow: 0px 20px 40px rgba(0,0,0,0.8);
+    padding: 30px;
+    position: relative;
+}
+
+.info-panel h2 {
+    font-family: 'Cinzel Decorative', serif;
+    color: #111;
+    font-size: 1.6rem;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    border-bottom: 3px double #aaa;
+    padding-bottom: 10px;
+}
+
+
+.specs-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.specs-table tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+.specs-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.specs-table td.label {
+    font-family: 'Metamorphous', serif;
+    font-weight: bold;
+    color: var(--spidey-red);
+    width: 35%;
+}
+
+.specs-table td.label::before {
+    content: '🕷 ';
+    font-size: 0.9rem;
+    color: #444;
+    margin-right: 8px;
+}
+
+
+.synopsis-box {
+    background: #ffffff;
+    border: 2px dashed #888;
+    padding: 25px;
+    position: relative;
+    box-shadow: inset 0 0 15px rgba(0,0,0,0.05);
+}
+
+.synopsis-box h3 {
+    font-family: 'Metamorphous', serif;
+    color: var(--spidey-red);
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 1.3rem;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding-bottom: 5px;
+}
+
+.synopsis-box p {
+    line-height: 1.7;
+    color: #333;
+    text-align: justify;
+    margin: 0;
+}
+
+footer {
+    background-color: #060a12;
+    text-align: center;
+    padding: 25px;
+    margin-top: 60px;
+    font-size: 0.9rem;
+    color: #626f84;
+    border-top: 3px solid var(--gold);
+    letter-spacing: 1px;
+}
